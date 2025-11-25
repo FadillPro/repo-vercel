@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "d448012b-50c7-44c2-ba0d-f3fd51d8f964",
+		"name": "direktor(pengamanan)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47946536"
+	},
+	"item": [
+		{
+			"name": "register/login",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"April123\",\r\n    \"password\": \"april_aja\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3300/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3300",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"April123\",\r\n    \"password\": \"april_aja\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3300/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3300",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET,POST,PUT,DELETE",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3300/directors/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3300",
+							"path": [
+								"directors",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3300/directors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3300",
+							"path": [
+								"directors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kirim(gagal)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Namii\",\r\n    \"birthYear\": 2000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3300/directors/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3300",
+							"path": [
+								"directors",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kirim(Suksess)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImFwcmlsMTIzIn0sImlhdCI6MTc2MTc4MjEzOSwiZXhwIjoxNzYxNzg1NzM5fQ.RftFxUcuFwj7yXDDR3_--vx8dEdGc-f30MiNl3Skf-Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Usopp\",\r\n    \"birthYear\": 2002\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3300/directors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3300",
+							"path": [
+								"directors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit(gagal)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Brook\",\r\n    \"birthYear\": 2022\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3300/directors/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3300",
+							"path": [
+								"directors",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit(Berhasil)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImFwcmlsMTIzIn0sImlhdCI6MTc2MTc4MjEzOSwiZXhwIjoxNzYxNzg1NzM5fQ.RftFxUcuFwj7yXDDR3_--vx8dEdGc-f30MiNl3Skf-Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"Brook\",\r\n    \"birthYear\": 2022\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3300/directors/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3300",
+							"path": [
+								"directors",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete dir",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "testing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3300/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
