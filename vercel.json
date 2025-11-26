@@ -9,7 +9,14 @@
     "routes": [
         {
             "src": "/(.*)",
+<<<<<<< HEAD
             "dest": "server.js"
         }
     ]
 }
+=======
+            "dest": "server_pg.js"
+        }
+    ]
+}
+>>>>>>> 67f84a2c8c00eb35a3057fb8dae726ef11260d11
