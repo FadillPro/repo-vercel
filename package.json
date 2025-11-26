@@ -9,7 +9,7 @@
     "nyala": "nodemon server_sqlite.js",
     "mongoOn": "nodemon server_mongo.js",
     "api": "nodemon api.js",
-    "start": "node server_pg.js"
+     "pgOn": "nodemon server_pg.js"
   },
   "keywords": [],
   "author": "",
