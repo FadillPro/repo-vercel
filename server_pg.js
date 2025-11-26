@@ -7,12 +7,8 @@ const jwt = require('jsonwebtoken');
 const {authenticateToken, authorizeRole} = require('./middleware/authMiddleware');
 
 const app = express();
-<<<<<<< HEAD
-const PORT= process.env.JWT_SECRET;
-=======
 const PORT = process.env.PORT || 3300;
 const JWT_SECRET= process.env.JWT_SECRET;
->>>>>>> 67f84a2c8c00eb35a3057fb8dae726ef11260d11
 
 app.use(cors());
 app.use(express.json);
@@ -146,12 +142,7 @@ app.delete('/movies/:id', [authenticateToken, authorizeRole('admin')], async (re
     } catch (err) {
         next(err)
     }
-<<<<<<< HEAD
 });
-=======
-});
-
 app.listen(PORT, "0.0.0.0", () => {
     console.log(`server aktif di port${PORT}`);
 });
->>>>>>> 67f84a2c8c00eb35a3057fb8dae726ef11260d11
