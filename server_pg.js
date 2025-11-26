@@ -2,7 +2,6 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const db = require('./database_new');
-const { default: bcrypt } = require('bcryptjs');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const {authenticateToken, authorizeRole} = require('./middleware/authMiddleware');

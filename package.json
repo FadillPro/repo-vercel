@@ -8,6 +8,7 @@
     "direktor": "nodemon server_direktor.js",
     "nyala": "nodemon server_sqlite.js",
     "mongoOn": "nodemon server_mongo.js",
+    "pgOn": "nodemon server_pg.js",
     "api": "nodemon api.js"
   },
   "keywords": [],
